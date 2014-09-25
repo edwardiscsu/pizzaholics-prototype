@@ -1,4 +1,7 @@
-﻿using System;
+﻿using AttributeRouting.Web.Http;
+using PizzaholicsPrototype.Models.Models;
+using PizzaholicsPrototype.Repositories.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,32 +12,61 @@ namespace PizzaholicsPrototype.Controllers
 {
     public class MembersController : ApiController
     {
-        // GET api/values
-        public IEnumerable<string> Get()
+        private IMembersRepository MembersRepository { get; set; }
+
+        public MembersController(IMembersRepository membersRepository)
         {
-            return new string[] { "value1", "value2" };
+            this.MembersRepository = membersRepository;
         }
 
-        // GET api/values/5
-        
-        public string Get(int id)
+
+        [GET("api/members/{memberNumber}")]
+        public Member GetMember(int memberNumber)
         {
-            return "value";
+            var member = new Member();
+
+            try
+            {
+                //TODO
+            }
+            catch (Exception e)
+            {
+                var responseMessage = new HttpResponseMessage(HttpStatusCode.BadRequest); 
+                responseMessage.ReasonPhrase = e.Message;
+                throw new HttpResponseException(responseMessage);
+            }
+
+            return member;
         }
 
-        // POST api/values
-        public void Post([FromBody]string value)
+        [POST("api/members/")]
+        public void PostMember([FromBody]Member newMember)
         {
+            try
+            {
+                //TODO
+            }
+            catch (Exception e)
+            {
+                var responseMessage = new HttpResponseMessage(HttpStatusCode.BadRequest);
+                responseMessage.ReasonPhrase = e.Message;
+                throw new HttpResponseException(responseMessage);
+            }
         }
 
-        // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
+        [PUT("api/members/{memberNumber}")]
+        public void PutMember(int memberNumber, [FromBody]Member updatedMember)
         {
-        }
-
-        // DELETE api/values/5
-        public void Delete(int id)
-        {
+            try
+            {
+                //TODO
+            }
+            catch (Exception e)
+            {
+                var responseMessage = new HttpResponseMessage(HttpStatusCode.BadRequest);
+                responseMessage.ReasonPhrase = e.Message;
+                throw new HttpResponseException(responseMessage);
+            }
         }
     }
 }

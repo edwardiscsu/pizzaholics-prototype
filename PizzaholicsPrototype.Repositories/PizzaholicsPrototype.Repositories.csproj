@@ -46,6 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IDirectoriesRepository.cs" />
+    <Compile Include="Interfaces\IMembersRepository.cs" />
+    <Compile Include="Interfaces\IProvidersRepository.cs" />
+    <Compile Include="Interfaces\IReportsRepository.cs" />
+    <Compile Include="Interfaces\IServicesRepository.cs" />
+    <Compile Include="MembersRepository\MembersRepository.cs" />
+    <Compile Include="MembersRepository\MembersRepositoryFake.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -54,10 +61,18 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DirectoriesRepository\" />
-    <Folder Include="MembersRepository\" />
     <Folder Include="ProvidersRepository\" />
     <Folder Include="ReportsRepository\" />
     <Folder Include="ServicesRepository\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PizzaholicsPrototype.Models\PizzaholicsPrototype.Models.csproj">
+      <Project>{a73eb6e2-d1a9-437c-a765-0d465f66438f}</Project>
+      <Name>PizzaholicsPrototype.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

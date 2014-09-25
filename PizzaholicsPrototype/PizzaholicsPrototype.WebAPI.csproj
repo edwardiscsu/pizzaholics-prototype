@@ -310,10 +310,20 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PizzaholicsPrototype.Models\PizzaholicsPrototype.Models.csproj">
+      <Project>{a73eb6e2-d1a9-437c-a765-0d465f66438f}</Project>
+      <Name>PizzaholicsPrototype.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PizzaholicsPrototype.Repositories\PizzaholicsPrototype.Repositories.csproj">
+      <Project>{4e1dd3ef-7d1e-4c91-926c-cd13ad9c06b8}</Project>
+      <Name>PizzaholicsPrototype.Repositories</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
