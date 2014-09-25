@@ -17,7 +17,7 @@ namespace PizzaholicsPrototype.Tests.Controllers
         public void Get()
         {
             // Arrange
-            ValuesController controller = new ValuesController();
+            MembersController controller = new MembersController();
 
             // Act
             IEnumerable<string> result = controller.Get();
@@ -33,7 +33,7 @@ namespace PizzaholicsPrototype.Tests.Controllers
         public void GetById()
         {
             // Arrange
-            ValuesController controller = new ValuesController();
+            MembersController controller = new MembersController();
 
             // Act
             string result = controller.Get(5);
@@ -46,7 +46,7 @@ namespace PizzaholicsPrototype.Tests.Controllers
         public void Post()
         {
             // Arrange
-            ValuesController controller = new ValuesController();
+            MembersController controller = new MembersController();
 
             // Act
             controller.Post("value");
@@ -58,7 +58,7 @@ namespace PizzaholicsPrototype.Tests.Controllers
         public void Put()
         {
             // Arrange
-            ValuesController controller = new ValuesController();
+            MembersController controller = new MembersController();
 
             // Act
             controller.Put(5, "value");
@@ -70,7 +70,7 @@ namespace PizzaholicsPrototype.Tests.Controllers
         public void Delete()
         {
             // Arrange
-            ValuesController controller = new ValuesController();
+            MembersController controller = new MembersController();
 
             // Act
             controller.Delete(5);
