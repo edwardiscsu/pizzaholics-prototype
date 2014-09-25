@@ -7,13 +7,11 @@ using System.Web.Mvc;
 
 namespace PizzaholicsPrototype.Controllers
 {
-    public class HomeController : ApiController
+    public class HomeController : Controller
     {
-        public void Index()
+        public ActionResult Index()
         {
-            
+            return View();
         }
-
-        
     }
 }
