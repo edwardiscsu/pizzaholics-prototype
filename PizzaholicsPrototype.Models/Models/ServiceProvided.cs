@@ -16,6 +16,9 @@ namespace PizzaholicsPrototype.Models.Models
         public int ProviderNumber { get; set; }
         public int MemberNumber { get; set; }
 
+        public string ProviderName { get; set; }
+        public string MemberName { get; set; }
+
         public string Comments { get; set; }
 
 

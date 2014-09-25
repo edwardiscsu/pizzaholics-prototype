@@ -35,5 +35,11 @@ namespace PizzaholicsPrototype.Models.Reports
                 return total;
             }
         }
+
+
+        public WeeklyProviderReimbursementReport()
+        {
+
+        }
     }
 }
